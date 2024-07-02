@@ -31,10 +31,17 @@ class Figure:
     def __init__(self, row, col):
         self.row = row
         self.col = col
-        self.moves = [(row, col - 1), (row, col - 2),
-                      (row, col + 1), (row, col + 2),
-                      (row - 1, col), (row - 2, col),
-                      (row + 1, col), (row + 2, col)]
+        self.moves = [
+    (row, col - 1), (row, col - 2), (row, col - 3), 
+    (row, col + 1), (row, col + 2), (row, col + 3), 
+    (row - 1, col), (row - 2, col), (row - 3, col), 
+    (row + 1, col), (row + 2, col), (row + 3, col), 
+    (row - 1, col - 1), (row - 2, col - 2), (row - 3, col - 3), 
+    (row - 1, col + 1), (row - 2, col + 2), (row - 3, col + 3), 
+    (row + 1, col - 1), (row + 2, col - 2), (row + 3, col - 3), 
+    (row + 1, col + 1), (row + 2, col + 2), (row + 3, col + 3)
+]
+
 
     def make_move(self, board):
         board[self.row, self.col] = "#"
